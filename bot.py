@@ -45,7 +45,7 @@ async def start_command(message: types.Message):
     eng_chat_button = types.InlineKeyboardButton(text="ENG Chat", url="https://t.me/spudichat")
     site_button = types.InlineKeyboardButton(text="Site", web_app=WebAppInfo(url="https://spudi.me/"))
     x_button = types.InlineKeyboardButton(text="X (Twitter)", url="https://x.com/spuditon")
-    fairlaunch_button = types.InlineKeyboardButton(text="Site", web_app=WebAppInfo(url="https://tonraffles.app/jetton/fairlaunch/$SPUDI"))
+    fairlaunch_button = types.InlineKeyboardButton(text="Fairlaunch", web_app=WebAppInfo(url="https://tonraffles.app/jetton/fairlaunch/$SPUDI"))
     keyboard.add(chanel_button)
     keyboard.add(ru_chat_button, eng_chat_button)
     keyboard.add(site_button, x_button)
