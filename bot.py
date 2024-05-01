@@ -38,14 +38,18 @@ async def start_command(message: types.Message):
 
     # Закрываем соединение с базой данных
     conn.close()
-    keyboard = types.InlineKeyboardMarkup()
 
+    keyboard = types.InlineKeyboardMarkup()
+    schedule_button = types.InlineKeyboardButton(text="Schedule",
+                                                 web_app=WebAppInfo(
+                                                     url="https://www.geckoterminal.com/ton/pools/EQAvvszNFKz8pJJqLTBR3wq7oHgkDlRYmVMu-TmPB7tR2PUh"))
     chanel_button = types.InlineKeyboardButton(text="SPUDI", url="https://t.me/spuditon")
     ru_chat_button = types.InlineKeyboardButton(text="RU Chat", url="https://t.me/spudichatru")
     eng_chat_button = types.InlineKeyboardButton(text="ENG Chat", url="https://t.me/spudichat")
     site_button = types.InlineKeyboardButton(text="Site", web_app=WebAppInfo(url="https://spudi.me/"))
     x_button = types.InlineKeyboardButton(text="X (Twitter)", url="https://x.com/spuditon")
     fairlaunch_button = types.InlineKeyboardButton(text="Fairlaunch", web_app=WebAppInfo(url="https://tonraffles.app/jetton/fairlaunch/$SPUDI"))
+    keyboard.add(schedule_button)
     keyboard.add(chanel_button)
     keyboard.add(ru_chat_button, eng_chat_button)
     keyboard.add(site_button, x_button)
